@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "express-esm-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "esbuild src/app.ts --platform=node --bundle --minify --outfile=build/app.js --module",
+    "start": "node build/app.js",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/app.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.11",
+    "tsc-alias": "^1.8.8"
+  }
+}
